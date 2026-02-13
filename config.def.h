@@ -90,7 +90,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_F4,     quit,           {0} }, // Updated to Shift + F4
 
 	/* Custom */
-	{ MODKEY|ControlMask,           XK_F2,      spawn,          SHCMD("xsel -ob > /dev/shm/shared_clip && sudo chvt 2") },
+	{ Mod4Mask|ControlMask, XK_F2, spawn, SHCMD("xsel -ob > /dev/shm/shared_clip && ~/bin/mytptty2") },
 	{ MODKEY,                       XK_w,      spawn,          {.v = firefoxcmd } }, // Mod + w for Firefox
 };
 

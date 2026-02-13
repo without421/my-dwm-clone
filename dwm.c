@@ -20,7 +20,6 @@
  *
  * To understand everything else, start reading main().
  */
-/* See LICENSE file for copyright and license details. */
 #include <errno.h>
 #include <locale.h>
 #include <signal.h>

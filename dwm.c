@@ -20,6 +20,7 @@
  *
  * To understand everything else, start reading main().
  */
+/* See LICENSE file for copyright and license details. */
 #include <errno.h>
 #include <locale.h>
 #include <signal.h>
@@ -407,7 +408,7 @@ attachstack(Client *c)
 void
 buttonpress(XEvent *e)
 {
-	unsigned int i, x, click;
+	unsigned int i, click;
 	Arg arg = {0};
 	Client *c;
 	Monitor *m;
@@ -675,8 +676,8 @@ enternotify(XEvent *e)
 void
 expose(XEvent *e)
 {
-	Monitor *m;
-	XExposeEvent *ev = &e->xexpose;
+	/* This space intentionally left blank */
+	(void)e;
 }
 
 void
@@ -995,13 +996,10 @@ monocle(Monitor *m)
 void
 motionnotify(XEvent *e)
 {
-	static Monitor *mon = NULL;
-	Monitor *m;
 	XMotionEvent *ev = &e->xmotion;
 
 	if (ev->window != root)
 		return;
-	mon = m;
 }
 
 void
@@ -1009,7 +1007,6 @@ movemouse(const Arg *arg)
 {
 	int x, y, ocx, ocy, nx, ny;
 	Client *c;
-	Monitor *m;
 	XEvent ev;
 	Time lasttime = 0;
 
@@ -1156,7 +1153,6 @@ resizemouse(const Arg *arg)
 {
 	int ocx, ocy, nw, nh;
 	Client *c;
-	Monitor *m;
 	XEvent ev;
 	Time lasttime = 0;
 
@@ -1817,7 +1813,6 @@ wintomon(Window w)
 {
 	int x, y;
 	Client *c;
-	Monitor *m;
 
 	if (w == root && getrootptr(&x, &y))
 		return recttomon(x, y, 1, 1);

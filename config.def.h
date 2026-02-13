@@ -38,9 +38,9 @@ static const int refreshrate = 30;  /* refresh rate (per second) for client move
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
+	{ "[M]",      monocle }, /* first entry is default */
+	{ "[]=",      tile },    
 	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
 };
 
 /* key definitions */
